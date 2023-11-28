@@ -6,11 +6,6 @@ Ex:
 pushFront([5,7,2,3], 8) => [8,5,7,2,3]
 pushFront([5,7,2,3]) => [7,99]
  */
-// function pushFront(arr, val){
-//     arr.push(val)
-//     console.log(arr)
-// }
-// pushFront([1,2,3,4], 5)
 function pushFront(arr, val){
     for(var i = arr.length; i > 0; i--){
         arr[i] = arr[i-1];
