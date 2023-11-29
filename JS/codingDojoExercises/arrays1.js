@@ -29,9 +29,15 @@ popFront([0,5,10,15]) => 0 returned, with [5,10,15] printed in the function
 popFront([4,5,7,9]) => 4 returned, with [5,7,9] printed in the function
  */
 function popFront(arr){
-    for(var i = 0; i < arr.length - 1; i++){
+    //save the value at the beginning of the array
+    var removedValue = arr[0];
+
+    for(var i = 0; i < arr.length -1; i++){
         arr[i] = arr[i + 1]
     }
-    console.log( arr)
+    arr.length = arr.length - 1
+    console.log("Removed value:", removedValue);
+    console.log("Modified array:", arr);
+    
 }
 popFront([1,2,3,4])
