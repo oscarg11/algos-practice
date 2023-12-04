@@ -63,4 +63,28 @@ function insertAt(arr, index, val){
 insertAt([1,2,3,4],3,45)
 console.log("-------------")
 
+// BONUS: Remove At
+console.log("Remove At:")
+/***********************************
+Given an array and an index into array, remove and return the array value at that index.
+Prove the value is removed from the array by printing it. 
+Think of popFront(arr) as equivalent to removeAt(arr,0).
+
+Examples:
+
+removeAt([1000,3,204,77], 1) => 3 returned, with [1000,204,77] printed in the function
+removeAt([8,20,55,44,98], 3) => 44 returned, with [8,20,55,98] printed in the function
+ */
+function removeAt(arr,index){
+    var removedValue = arr[index];
+    //Shift elements to the left starting from the given index
+    for(var i = index; i < arr.length; i++){
+        arr[i] = arr[i+1];
+    }
+    arr.length--;//removes duplicate last element
+
+    console.log("Removed value:", removedValue);
+    console.log("Modified array:", arr);
+}
+removeAt([1,2,3,4,5], 2)
 
