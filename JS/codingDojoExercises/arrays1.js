@@ -87,4 +87,26 @@ function removeAt(arr,index){
     console.log("Modified array:", arr);
 }
 removeAt([1,2,3,4,5], 2)
+console.log("-------------")
 
+//BONUS: Swap Pairs
+console.log("Swap Pairs:")
+/****************************************
+Swap positions of successive pairs of values of given array.
+If length is odd, do not change the final element.
+
+Examples:
+
+insertAt([1,2,3,4]) => [2,1,4,3]
+insertAt(["Brendan",true,42]) => [true,"Brendan",42]
+ *******************************************/
+function insertAt(arr){
+    //this loop ensures that it process the array in pairs
+    for(let  i = 0; i < arr.length -1;i+=2){
+        let temp = arr[i]
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+    }
+    console.log("Modified array:", arr);
+}
+insertAt([1,2,3,4,5])
