@@ -110,3 +110,38 @@ function insertAt(arr){
     console.log("Modified array:", arr);
 }
 insertAt([1,2,3,4,5])
+console.log("-------------")
+
+//BONUS: Remove dupes
+console.log("Remove Dupes:")
+/**
+Given a sorted array, remove duplicate values. Because array elements are already in order,
+all duplicate values will be grouped together. If you already made the Remove At function,
+you are welcome to use that! If you solved this using nested loops, for an extra challenge,
+try to do it without any nested loops!
+
+Examples:
+
+removeDupes([-2,-2,3.14,5,5,10]) => [-2,3.14,5,10]
+removeDupes([9,19,19,19,19,19,29]) => [9,19,29]
+ */
+
+function removeDupes(arr) {
+    //Initialize uniqueIndex to keep track of the last unique element
+    let uniqueIndex = 0;
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[uniqueIndex] !== arr[i]) {
+            //If different, increment uniqueIndex and update the next position with the current element
+            uniqueIndex++;
+            arr[uniqueIndex] = arr[i];
+        }
+    }
+
+    //Trim the array to remove the duplicates
+    arr.length = uniqueIndex + 1;
+
+    console.log(arr);
+}
+
+removeDupes([9,19,19,19,19,19,29])
