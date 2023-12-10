@@ -74,19 +74,17 @@ grid of the given width and height.
 
  */
 let size = 8;
-let chessString = " ";
-
-for (let row = 0; row < size; row++) {
-    let rowString = ""; //Initialize an empty string for each row
-
-    for (let col = 0; col < size; col++) {
-
-        if ((row + col) % 2 === 0) {
-            rowString += " "; //add space
-        } else {
-            rowString += "#"; //add #
+for(let row = 0; row < size; row++){
+    //initialize an empty string for each row
+    let rowString = "" 
+    for(let col = 0; col < size; col++){
+        //create alternating pattern of spaces and #
+        if((row + col) % 2 === 0){
+            rowString = rowString + " ";
+        }else{
+            (row + col) % 2 === 1
+            rowString = rowString + "#";
         }
     }
-
-    console.log(rowString);
+    console.log(rowString)
 }
