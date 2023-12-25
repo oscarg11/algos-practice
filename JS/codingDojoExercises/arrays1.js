@@ -100,7 +100,7 @@ Examples:
 insertAt([1,2,3,4]) => [2,1,4,3]
 insertAt(["Brendan",true,42]) => [true,"Brendan",42]
  *******************************************/
-function insertAt(arr){
+function swapPairs(arr){
     //this loop ensures that it process the array in pairs
     for(let  i = 0; i < arr.length -1;i+=2){
         let temp = arr[i]
@@ -109,7 +109,7 @@ function insertAt(arr){
     }
     console.log("Modified array:", arr);
 }
-insertAt([1,2,3,4,5])
+swapPairs([1,2,3,4,5])
 console.log("-------------")
 
 //BONUS: Remove dupes
