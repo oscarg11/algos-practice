@@ -9,9 +9,10 @@ pushFront([5,7,2,3]) => [7,99]
 console.log("Push Front:")
 function pushFront(arr, val){
     arr[arr.length] = val;
-    for(var i = arr.length - 1; i < 0; i++){
-        arr = arr.length -arr[i]
+    for(var i = arr.length - 1; i > 0; i--){
+        arr[i] = arr[i-1]
     }
+    arr[i] = val
     console.log(arr)
 }
 pushFront([1,2,3,4], 13)
