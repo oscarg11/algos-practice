@@ -27,7 +27,16 @@ Ex:
 popFront([0,5,10,15]) => 0 returned, with [5,10,15] printed in the function
 popFront([4,5,7,9]) => 4 returned, with [5,7,9] printed in the function
  */
-
+function popFront(arr){
+    let RemovedValue = arr[0];
+    for(var i = 0; i< arr.length-1; i++){
+        arr[i]=arr[i+1];
+    }
+    arr.length--;
+    console.log("Removed Value: ",RemovedValue)
+    console.log(arr)
+}
+popFront([1,2,3,4])
 //3.) Insert At
 console.log("Insert At:")
 /****** 
