@@ -97,7 +97,21 @@ Examples:
 insertAt([1,2,3,4]) => [2,1,4,3]
 insertAt(["Brendan",true,42]) => [true,"Brendan",42]
  *******************************************/
+function swapPairs(arr){
+    if(arr.length % 2 ===1 ){
+        for(var i=0; i<arr.length-1; i+=2){
+            [arr[i], arr[i+1]] = [arr[i+1],arr[i]]
+        }
+    }else{
+        for(var i=0; i<arr.length; i+=2){
+            [arr[i], arr[i+1]] = [arr[i+1],arr[i]]
 
+    }
+}
+    
+    console.log(arr)
+}
+swapPairs([1,2,3,4,5])
 
 //BONUS: Remove dupes
 console.log("Remove Dupes:")
