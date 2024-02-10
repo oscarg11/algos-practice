@@ -48,13 +48,14 @@ insertAt([100,200,5], 2, 311) => [100,200,311,5]
 insertAt([9,33,7], 1, 42) => [9,42,33,7]
 */
 function insertAt(arr, indx, val){
-    for(var i = arr.length -1; i >= indx; i--){
+    arr[arr.length] = val
+    for(var i = arr.length -1; i > indx; i--){
         arr[i]=arr[i-1];
     }
     arr[indx] = val;
     console.log(arr)
 }
-insertAt([1,2,3,4],1,7)
+insertAt([1,2,3,4],2,99)
 // BONUS: Remove At
 console.log("Remove At:")
 /***********************************
