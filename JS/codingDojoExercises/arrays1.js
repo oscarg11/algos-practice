@@ -16,6 +16,8 @@ function pushFront(arr, val){
     console.log(arr)
 }
 pushFront([1,2,3,4], 13)
+
+
 //2.) Pop Front
 console.log("Pop Front:")
 /**
@@ -37,6 +39,8 @@ function popFront(arr){
     console.log(arr)
 }
 popFront([1,2,3,4])
+
+
 //3.) Insert At
 console.log("Insert At:")
 /****** 
@@ -56,6 +60,8 @@ function insertAt(arr, indx, val){
     console.log(arr)
 }
 insertAt([1,2,3,4],2,99)
+
+
 // BONUS: Remove At
 console.log("Remove At:")
 /***********************************
@@ -68,6 +74,17 @@ Examples:
 removeAt([1000,3,204,77], 1) => 3 returned, with [1000,204,77] printed in the function
 removeAt([8,20,55,44,98], 3) => 44 returned, with [8,20,55,98] printed in the function
  */
+function removeAt(arr, indx){
+    let removedValue = arr[indx]
+    for( var i = indx; i<arr.length-1; i++){
+        arr[i] = arr[i+1]
+    }
+    arr.length--
+    console.log("Eliminated Value: ", removedValue);
+    console.log("New Array: ", arr)
+}
+removeAt([1,2,99,3,4], 2)
+
 
 //BONUS: Swap Pairs
 console.log("Swap Pairs:")
