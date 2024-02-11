@@ -7,3 +7,20 @@ Working 'in-place' means that you cannot use a second
 array – move values within the array that you are given.
 As always, do not use built-in array functions such as splice().
  */
+function ReverseArray(arr){
+    let leftIndex =0;
+    let rightIndex = arr.length -1;
+
+    while(leftIndex<rightIndex){
+        //swap elements with temporary var
+        let temp = arr[leftIndex]
+        arr[leftIndex] = arr[rightIndex]
+        arr[rightIndex] = temp;
+
+        //move indices to the middle
+        leftIndex++;
+        rightIndex--;
+    }
+    console.log(arr)
+}
+ReverseArray([1,2,3,4,5])

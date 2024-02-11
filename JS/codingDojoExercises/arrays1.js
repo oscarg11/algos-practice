@@ -105,7 +105,6 @@ function swapPairs(arr){
     }else{
         for(var i=0; i<arr.length; i+=2){
             [arr[i], arr[i+1]] = [arr[i+1],arr[i]]
-
     }
 }
     
