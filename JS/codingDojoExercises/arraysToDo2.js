@@ -7,6 +7,7 @@ Working 'in-place' means that you cannot use a second
 array – move values within the array that you are given.
 As always, do not use built-in array functions such as splice().
  */
+console.log("Reverse Array: ")
 function ReverseArray(arr){
     let leftIndex =0;
     let rightIndex = arr.length -1;
@@ -24,3 +25,15 @@ function ReverseArray(arr){
     console.log(arr)
 }
 ReverseArray([1,2,3,4,5])
+
+/**
+ * Rotate:
+ * Implement rotateArr(arr, shiftBy) that accepts array and offset. Shift arr's values
+ * to the right by that amount. 'Wrap-around' any values that shift off array's end to 
+ * the other side, so that no data is lost. Operate in-place: given ([1,2,3], 1).
+ * change the array to [3,1,2]. Don't use built in functions.
+ * Second: allow negative shiftBy (shiftL, not R).
+ * Third: minimize memory usage. With no new array, handle arrays/shiftBys in the 
+ * millions.
+ * Fourth: minimize the touches of each element.
+ */
