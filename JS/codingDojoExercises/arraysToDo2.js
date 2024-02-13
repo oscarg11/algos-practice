@@ -37,3 +37,18 @@ ReverseArray([1,2,3,4,5])
  * millions.
  * Fourth: minimize the touches of each element.
  */
+console.log("Rotate:")
+
+function rotateArr(arr, shiftBy){
+    let currentIndx = 0;
+    let nextIndx = currentIndx + 1;
+     while(currentIndx < arr.length){
+        let temp = arr[currentIndx]
+        arr[currentIndx]= arr[nextIndx]
+        arr[nextIndx] = temp
+
+        currentIndx = currentIndx + shiftBy;
+     }
+    console.log(arr)
+}
+rotateArr([1,2,3,4,5], 1)
