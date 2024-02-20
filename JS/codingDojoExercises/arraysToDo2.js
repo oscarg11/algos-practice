@@ -40,15 +40,11 @@ ReverseArray([1,2,3,4,5])
 console.log("Rotate:")
 
 function rotateArr(arr, shiftBy){
-    let currentIndx = 0;
-    let nextIndx = currentIndx + 1;
-     while(currentIndx < arr.length){
-        let temp = arr[currentIndx]
-        arr[currentIndx]= arr[nextIndx]
-        arr[nextIndx] = temp
-
-        currentIndx = currentIndx + shiftBy;
-     }
+    for(let i=0; i<arr.length; i++){
+        let currentIndex = arr[i]
+        arr[i]= (currentIndex + shiftBy)%arr.length
+        
+    }
     console.log(arr)
 }
 rotateArr([1,2,3,4,5], 1)
