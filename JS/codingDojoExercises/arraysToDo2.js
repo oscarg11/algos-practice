@@ -41,8 +41,8 @@ console.log("Rotate:")
 
 function rotateArr(arr, shiftBy){
     for(let i=0; i<arr.length; i++){
-        let currentIndex = arr[i]
-        arr[i]= (currentIndex + shiftBy)%arr.length
+        let currentIndex = 0;
+        currentIndex=(arr[i] + shiftBy)%arr.length
         
     }
     console.log(arr)
