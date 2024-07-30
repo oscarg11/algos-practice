@@ -10,20 +10,14 @@ to output the following triangle..
 ######
 #######
  ****************/
-console.log("1.) Looping A Trianlge")
 
-for(let triangle ="#"; triangle.length <= 7; triangle+="#" ){
-    console.log(triangle);
-}
-console.log("--------")
+console.log("1) Looping a Triangle")
 
-// alternate solution
-console.log("SOLUTION 2")
-let triangle2 = "#"
-while (triangle2.length <= 7){
-    console.log(triangle2)
-    triangle2 += "#"
+for(var i = 0; i < 7;i++){
+    let triangle = i + "#"
+    console.log(triangle)
 }
+
 console.log("--------------")
 
 // 2) FizzBuzz
@@ -39,17 +33,7 @@ When you have that working modify your program to print "FizzBuzz"
 for numbers that are divisible by both 3 and 5 (and still print "Fizz" and "Buzz"
 for numbers divisible by only one of those.)
  */
-for(let i = 1;i <= 100; i++){
-    if( i % 3 === 0 && i % 5 ===0){
-        console.log("FizzBuzz")
-    }else if( i % 3 ===0){
-        console.log("Fizz")
-    }else if (i % 5 ===0 ){
-        console.log("Buzz")
-    }else{
-        console.log(i)
-    }
-}
+
 console.log("--------------")
 
 // 3) Chessboard
@@ -73,18 +57,3 @@ size = 8 and change the program so that it works for any size, outputting a
 grid of the given width and height.
 
  */
-let size = 8;
-for(let row = 0; row < size; row++){
-    //initialize an empty string for each row
-    let rowString = "" 
-    for(let col = 0; col < size; col++){
-        //create alternating pattern of spaces and #
-        if((row + col) % 2 === 0){
-            rowString = rowString + " ";
-        }else{
-            (row + col) % 2 === 1
-            rowString = rowString + "#";
-        }
-    }
-    console.log(rowString)
-}
