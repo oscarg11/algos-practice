@@ -10,11 +10,10 @@ to output the following triangle..
 ######
 #######
  ****************/
-
+let triangle = ""
 console.log("1) Looping a Triangle")
-
 for(var i = 0; i < 7;i++){
-    let triangle = i + "#"
+    triangle += "#"
     console.log(triangle)
 }
 
