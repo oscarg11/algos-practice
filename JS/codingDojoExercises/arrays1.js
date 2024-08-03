@@ -51,8 +51,14 @@ Ex:
 insertAt([100,200,5], 2, 311) => [100,200,311,5]
 insertAt([9,33,7], 1, 42) => [9,42,33,7]
 */
-
-//insertAt([1,2,3,4],2,99)
+function insertAt(arr,index,newVal){
+    for(var i = arr.length; i > index; i--){
+        arr[i] = arr[i - 1];
+    }
+    arr[i]=newVal
+    console.log(arr)
+}
+insertAt([1,2,3,4],2,99)
 
 
 // BONUS: Remove At
