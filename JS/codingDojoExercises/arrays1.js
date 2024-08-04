@@ -73,8 +73,17 @@ Examples:
 removeAt([1000,3,204,77], 1) => 3 returned, with [1000,204,77] printed in the function
 removeAt([8,20,55,44,98], 3) => 44 returned, with [8,20,55,98] printed in the function
  */
+function removeAt(arr,index){
+    let removedValue = arr[index]
+    for(var i = index; i <=arr.length-2;i++){
+        arr[i] = arr[i+1];
+    }
+    arr.length--;
+    console.log("removed value: ", removedValue)
+    console.log(arr)
+}
 
-//removeAt([1,2,99,3,4], 2)
+removeAt([1,2,99,3,4], 2)
 
 
 //BONUS: Swap Pairs
