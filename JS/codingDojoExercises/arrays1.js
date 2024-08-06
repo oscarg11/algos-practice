@@ -75,7 +75,7 @@ removeAt([8,20,55,44,98], 3) => 44 returned, with [8,20,55,98] printed in the fu
  */
 function removeAt(arr,index){
     let removedValue = arr[index]
-    for(var i = index; i <=arr.length-2;i++){
+    for(var i = index; i < arr.length-1;i++){
         arr[i] = arr[i+1];
     }
     arr.length--;
@@ -97,7 +97,15 @@ Examples:
 insertAt([1,2,3,4]) => [2,1,4,3]
 insertAt(["Brendan",true,42]) => [true,"Brendan",42]
  *******************************************/
-
+function swapPairs(arr) {
+    for (var i = 0; i < arr.length - 1; i += 2) {
+        var temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+    }
+    console.log(arr);
+}
+swapPairs([1, 2, 3, 4]);
 
 //BONUS: Remove dupes
 console.log("Remove Dupes:")
