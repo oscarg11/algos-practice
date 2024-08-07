@@ -97,17 +97,17 @@ Examples:
 insertAt([1,2,3,4]) => [2,1,4,3]
 insertAt(["Brendan",true,42]) => [true,"Brendan",42]
  *******************************************/
-function swapPairs(arr) {
-    for (var i = 0; i < arr.length - 1; i += 2) {
-        var temp = arr[i];
-        arr[i] = arr[i + 1];
-        arr[i + 1] = temp;
+function swapPairs(arr){
+    for(var i =0; i < arr.length-1;i+=2){
+        var temp = arr[i]
+        arr[i] = arr[i+1];
+        arr[i+1] = temp
     }
-    console.log(arr);
+    console.log(arr)
 }
-swapPairs([1, 2, 3, 4]);
+swapPairs([1,2,3,4]);
 
-//BONUS: Remove dupes
+//BONUS: Remove 
 console.log("Remove Dupes:")
 /**
 Given a sorted array, remove duplicate values. Because array elements are already in order,
