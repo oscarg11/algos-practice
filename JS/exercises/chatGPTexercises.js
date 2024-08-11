@@ -29,3 +29,27 @@ function reverse(arr){
     console.log(arr)
 }
 reverse([1,2,3,4])
+
+/* 3.) Rotate Right
+Given an array, rotate its elements to the right by a given number of steps
+
+example:
+rotateRight([1, 2, 3, 4, 5], 2) => [4, 5, 1, 2, 3]
+ */
+console.log("****************")
+console.log("3.) Rotate Right:")
+
+function rotateRight(arr,steps){
+    let newArr = new Array(arr.length) // creates a new array to hold the rotated elements
+
+    steps = steps % arr.length; // ensures that if the number of steps is greater that the length it will rotate correctly
+
+    for(let i = 0; i < arr.length; i++){
+        //calculates the new index where the current element should go
+        let newIndex = (i + steps) % arr.length;
+        // place the element at its new index
+        newArr[newIndex] = arr[i]
+    }
+    console.log(newArr)
+}
+rotateRight([1,2,3,4],1)
