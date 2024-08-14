@@ -45,6 +45,7 @@ function rightTriangle(){
        let rowOutput = ""
        //set the inner loops condition to i (number of rows)
        for(let k = 1; k<=i; k++){
+        //whatever row number the innerloop is on will determine the amount of star printed
         rowOutput += "*"
        }
        console.log(rowOutput)
