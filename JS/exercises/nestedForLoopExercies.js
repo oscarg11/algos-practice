@@ -23,3 +23,31 @@ function multiplicationTable(){
     }
 }
 multiplicationTable();
+/*
+2.) Pattern Printing - Right angles trianle
+
+write a program that prints a right-angled triangle
+of stars ("*") with 5 rows. The out put should look like...
+
+*
+**
+***
+****
+*****
+
+*/ 
+console.log("-----------------")
+console.log("2. Right Triangle")
+
+function rightTriangle(){
+    //set the outer loop to 5 for eachrow
+    for(let i = 1; i<6;i++){
+       let rowOutput = ""
+       //set the inner loops condition to i (number of rows)
+       for(let k = 1; k<=i; k++){
+        rowOutput += "*"
+       }
+       console.log(rowOutput)
+    }
+}
+rightTriangle()
