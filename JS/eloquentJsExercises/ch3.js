@@ -18,7 +18,7 @@ console.log("--------------")
 /*
     2.) Recursion
         We've seen that % (the remainder operator) can be used to test whether
-        a number is even or odd by using %2 to see whether its divisible by 2
+        a number is even or odd by using % 2 to see whether its divisible by 2
         Heres another way to define whether a positive whole number is even
         or odd.
 
@@ -36,7 +36,9 @@ console.log("--------------")
 console.log("2). Recursion")
 
 function isEven(n){
-    if(n == 0){
+    if(n < 0){ // check for negative num
+        return isEven(-n) //convert to positive num
+    }else if(n == 0){
         return true;
     }else if(n == 1){
         return false;
@@ -44,4 +46,4 @@ function isEven(n){
         return isEven(n-2);
     }
 }
-console.log(isEven(50))
+console.log(isEven(-50))
