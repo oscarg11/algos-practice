@@ -73,12 +73,18 @@ console.log("--------------")
 console.log("3.) Bean counting")
 
 function countBs(word){
-    let numsOfBs = [];
-    for(let i = 0; i <= word.length - 1; i++){
-        if (word.charAt(i)=="B"){
-            numsOfBs += 1;
-        }
-    }
-    console.log(numsOfBs.length)
+    //use countChar function to count Bs
+    return countChar(word, "B")
 }
 countBs("BBBBnbb");
+
+function countChar(word, char){
+    let numOfChars = [];
+    for(let i = 0; i < word.length; i++){
+        if(word.charAt(i)==char){
+            numOfChars += 1;
+        }
+    }
+    console.log("Number of given character: ",numOfChars.length);
+}
+countChar("banana", "a")
