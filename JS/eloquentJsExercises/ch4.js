@@ -20,21 +20,33 @@ console.log(sum(range(1, 10)));
     Make sure it also works with negative step values so that the range(5, 2, -1) 
     produces [5, 4, 3, 2].
  */
-function range(start, end){
+function range(start, end,step){
     let arr = []
-    for(let i = start; i < end + 1; i++){
-        arr += i;
+    if(step < 0){
+        for(let i = end + 1; i > start; i -= step){
+            arr += i;
+        }
+        return arr;
+    } else if(step === true){
+        for(let i = start; i < end + 1; i += step){
+            arr += i;
+        }
+        return arr;
+    }else{
+        for(let i = start; i < end + 1; i++){
+            arr += i;
+        }
+        return arr;
     }
-    return arr;
 }
-console.log(range(1, 10));
+console.log(range(1, 10,2));
 
 function sum(arr){
     
-    let result = 0;
+    let sum = 0;
     for(let i = 0; i < arr.length; i++){
-        result = i + i
+        sum += arr[i]
     }
-    return result;
+    return "The sum is: " + sum;
 }
 console.log(sum([5,5,5]))
