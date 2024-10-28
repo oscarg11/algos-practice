@@ -20,6 +20,8 @@ console.log(sum(range(1, 10)));
     Make sure it also works with negative step values so that the range(5, 2, -1) 
     produces [5, 4, 3, 2].
  */
+console.log("1.) The Sum of a Range: ")
+
 function range(start, end,step){
     let arr = []
     if(step < 0){
@@ -51,3 +53,35 @@ function sum(arr){
     return "The sum is: " + sum;
 }
 console.log(sum([5,5,5]))
+
+console.log("**********************")
+
+/*
+    2.) Reversing an Array:
+
+    Arrays have a reverse method that changes the array by inverting the 
+    order in which its elements appear. For this exercise, write two functions,
+    reverseArray and reverseArrayInPlace.
+
+    The first, reverseArray, takes an array as an argument and produces a new array 
+    that has the same elements in the inverse order.
+
+    The second, reverseArrayInPlace, does what the reverse method does:
+    it modifies the array given as argument by reversing its elements.
+
+    Niether may use the standard reverse method.
+
+    Thinking back to the notes about side effects and pure functions in "Functions and Side Effects"
+    on page 54, which variant do you expect to be useful in more situations? Which runs faster?
+ */
+console.log("2.) Reversing an Array: ")
+
+function reverseArray(arr){
+    let reversed = [];
+
+    for(let i = arr.length; i > 0;i--){
+        reversed.push(i);
+    }
+    return reversed
+}
+console.log("Reversed Array: " + reverseArray([1,2,3,4]))
