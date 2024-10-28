@@ -23,23 +23,24 @@ console.log(sum(range(1, 10)));
 function range(start, end,step){
     let arr = []
     if(step < 0){
-        for(let i = end + 1; i > start; i -= step){
-            arr += i;
+        for(let i = start; i >= end; i += step){
+            arr.push(i);
         }
         return arr;
-    } else if(step === true){
-        for(let i = start; i < end + 1; i += step){
-            arr += i;
+    } else if(step === undefined){
+        for(let i = start; i <= end; i++){
+            arr.push(i);
         }
         return arr;
+        
     }else{
-        for(let i = start; i < end + 1; i++){
-            arr += i;
+        for(let i = start; i <= end; i += step){
+            arr.push(i);
         }
         return arr;
     }
 }
-console.log(range(1, 10,2));
+console.log(range(10, 0, -2));
 
 function sum(arr){
     
