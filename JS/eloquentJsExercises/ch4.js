@@ -79,9 +79,22 @@ console.log("2.) Reversing an Array: ")
 function reverseArray(arr){
     let reversed = [];
 
-    for(let i = arr.length; i > 0;i--){
-        reversed.push(i);
+    for(let i = arr.length -1; i >= 0;i--){
+        reversed.push(arr[i]);
     }
     return reversed
 }
-console.log("Reversed Array: " + reverseArray([1,2,3,4]))
+console.log("Reversed Array: ", reverseArray([1,2,3,4]))
+
+function reverseArrayInPlace(arr){
+    let length = arr.length;
+    let midPoint = Math.floor(arr.length / 2); //splits array in half to easily swap indexes from front to back
+    
+    for(let i = 0; i < midPoint; i++){
+        let temp = arr[i];
+        arr[i] = arr[length - 1 - i]
+        arr[length - 1 - i] = temp
+    }
+    return arr;
+}
+console.log("Reversed array in Place: ", reverseArrayInPlace([1,2,3,4]))
