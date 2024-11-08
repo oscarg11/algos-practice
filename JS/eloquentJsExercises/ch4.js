@@ -104,7 +104,7 @@ console.log("**********************")
 /*
     3.) A List
 
-    Objects, as generic blobs of values, can be used to to build all sorts of data
+    Objects, as generic blobs of values, can be used to build all sorts of data
     structures. A common data structure is the list (not to be confused with array).
     A list is a nested set of objects, with the first object holding a reference to the 
     second, the second to the third and so on..
@@ -112,11 +112,13 @@ console.log("**********************")
     Write a function arrayToList that builds up a list structure like the one
     shown when given [1,2,3] as an argument.
 
-    Also write a listToArray function that produces an array from a list. Then add 
-    a helper function prepend, that produces an array from a list, and creates a new list
+    Also write a listToArray function that produces an array from a list. 
+
+    Then add a helper function prepend, that produces an array from a list, and creates a new list
     that adds the element to the front of the input list, and nth, which takes a list and a number
     and returns the element at the given position in the list (with zero reffering to the first element)
     or undefined when there is no such element.
+
     if you havent already also write a recursive version of nth.
  */
 console.log("3.) A List")
@@ -128,3 +130,28 @@ function arrayToList(arr){
         rest: arrayToList(arr.slice(1))// recursive call for the remaining array elements
     };
 }
+console.log("Array To List: ",arrayToList([1,2,3]))
+
+function listToArray(){
+    let arr = [];
+    let list = {
+        value:1,
+        rest: {
+            value: 2,
+            rest: {
+                value: 3,
+                rest: null
+            }
+        }
+    };
+
+    //loop until the end of the list
+    while(list !== null){
+        arr.push(list.value); // add current value to the array
+        list = list.rest; // move to the next node
+    }
+
+    return arr;
+
+}
+console.log("List to Array: ",listToArray())
